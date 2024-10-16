@@ -7,10 +7,10 @@
 } */
 
 /*字體-仙人掌明體*/
-@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
 *{
   font-family: 'Cactus Classical Serif';
-  }
+  } */
 
 /*字體-霞鶩文楷*/
 /* @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=LXGW+WenKai+TC&display=swap');
@@ -19,10 +19,10 @@
   } */
 
 /*字體-思源宋體*/
-/* @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&display=swap');
 *{
   font-family: 'Noto Serif TC';
-  } */
+  }
 
 /*字體-朱古力黑體*/
 /* @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Chocolate+Classical+Sans&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&display=swap');
