@@ -22,7 +22,7 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
@@ -40,9 +40,9 @@
               碳先知APP
             </a>
             <div class="d-flex">
-              <a class="btn btn-outline-success" type="submit" href="index.html" style="width: 50px;"><i
+              <a class="btn btn-outline-dark" type="submit" href="index.html" style="width: 50px;"><i
                   class="fa-solid fa-house"></i></a>
-              <a class="btn btn-outline-success" type="submit" href="main.html" style="margin-left: 5%; width: 50px;"><i
+              <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 50px;"><i
                   class="fa-solid fa-calculator"></i></a>
             </div>
           </div>
@@ -59,73 +59,61 @@
           <div class="col-12 text-center">
             <h2>高速公路</h2>
           </div>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body text-center">
+                <div class="row justify-content-center">
+                  <h3 class="card-title hight-light">基本資料</h3>
+                  <p class="card-text pt-3">
+                  <p>已輸入總長共
+                    <span class="hight-light">1000</span>
+                    公里
+                  </p>
 
+                  <div class="input-group mt-3">
+                    <span class="input-group-text">隧道長度</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-text">公里</span>
+                  </div>
 
-          <div class="card">
-            <div class="card-body">
-              <div class="row justify-content-center">
-                <h3 class="card-title">基本資料</h3>
-                <p class="card-text pt-2">
-                <div class="input-group mb-3">
-                  <span class="input-group-text">總長</span>
-                  <input type="text" class="form-control">
-                  <span class="input-group-text">公里</span>
+                  <div class="input-group mt-3">
+                    <span class="input-group-text">橋梁長度</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-text">公里</span>
+                  </div>
+
+                  <div class="input-group mt-3">
+                    <span class="input-group-text">路堤長度</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-text">公里</span>
+                  </div>
+
+                  </p>
+
                 </div>
-                <div class="input-group mb-3">
-                  <label for="customRange2" class="form-label">隧道比例(%) 已選擇:
-                    <span id="A_text" class="text-bg-main m-2 p-2"></span>%</label>
-                  <br />
-                  <input id="A_range" min="0" max="100" step="1" type="range" list="tickmarksA" class="form-range" />
-                  <datalist id="tickmarksA">
-                    <option value="0" label="0%"></option>
-                    <option value="100" label="100%"></option>
-                  </datalist>
-                </div>
 
-                <div class="input-group mb-3">
-                  <label for="customRange2" class="form-label">橋梁比例(%) 已選擇:
-                    <span id="B_text" class="text-bg-main m-2 p-2"></span>%</label>
-                  <br />
-                  <input id="B_range" min="0" max="100" step="1" type="range" list="tickmarksB" class="form-range" />
-                  <datalist id="tickmarksB">
-                    <option value="0" label="0%"></option>
-                    <option value="100" label="100%"></option>
-                  </datalist>
-                </div>
+              </div><!-- End Item -->
 
-                <div class="input-group mb-3">
-                  <label for="customRange2" class="form-label">路堤比例(%) 已選擇:
-                    <span id="C_text" class="text-bg-main m-2 p-2"></span>%</label>
-                  <br />
-                  <input id="C_range" min="0" max="100" step="1" type="range" list="tickmarksC" class="form-range" />
-                  <datalist id="tickmarksC">
-                    <option value="0" label="0%"></option>
-                    <option value="100" label="100%"></option>
-                  </datalist>
-                </div>
-                </p>
-
-              </div>
-
-            </div><!-- End Item -->
-
+            </div>
+            <div class="row"><a href="hightway_c_result.html" class="badge rounded-pill text-bg-main mt-2 shadow">GO <i
+                  class="fa-regular fa-circle-right"></i></a> </div>
           </div>
+
         </div>
-        <div class="row"><a href="hightway_c_result.html" class="badge rounded-pill text-bg-main mt-2 shadow">GO <i
-              class="bi bi-arrow-right"></i></a> </div>
+
       </div>
     </section>
     <!-- /Section -->
   </main>
 
-  <footer id="footer" class="footer position-relative">
+  <footer id="footer" class="footer position-relative text-start">
     <div class="container">
-      <p>
-        如對本APP有使用問題或建議，請洽中興公司園路部永續中心
-        王珮琪副理(02-27698388#10648)/許智修副理(02-27698388#10663)
-      </p>
-      <div class="copyright">
-        <span>Copyright © 中興工程顧問股份有限公司 園區及路航工程部2024</span>
+      <div class="text-start mb-3">
+     <span>版權聲明 | 本網站內容版權所有，未經書面許可禁止複製、散佈、修改或商業使用，引用請聯繫授權。
+     <br>免責聲明 | 本網站所提供的資訊主要基於公司自身經驗及政府公開資料進行估算，僅供參考之用。</span>
+      </div>
+        <div class="copyright">
+        <span>Copyright © 中興工程顧問股份有限公司 園區及路航工程部 2024</span>
       </div>
     </div>
   </footer>
@@ -142,37 +130,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    window.onload = function () {
-      // 隧道比例
-      const A_value = document.querySelector("#A_text");
-      const A_input = document.querySelector("#A_range");
-      A_value.textContent = A_input.value;
-      A_input.addEventListener("input", (event) => {
-        A_value.textContent = event.target.value;
-      });
-
-      // 橋梁比例
-      const B_value = document.querySelector("#B_text");
-      const B_input = document.querySelector("#B_range");
-      B_value.textContent = B_input.value;
-      B_input.addEventListener("input", (event) => {
-        B_value.textContent = event.target.value;
-      });
-
-      // 路堤比例
-      const C_value = document.querySelector("#C_text");
-      const C_input = document.querySelector("#C_range");
-      C_value.textContent = C_input.value;
-      C_input.addEventListener("input", (event) => {
-        C_value.textContent = event.target.value;
-      });
-
-
-    };
-  </script>
-
 
 </body>
 

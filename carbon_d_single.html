@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>碳先知APP</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="index-page">
+  <main class="main">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/favicon.png" width="30" height="30" class="d-inline-block align-text-center" />
+              碳先知APP
+            </a>
+            <div class="d-flex">
+              <a class="btn btn-outline-dark" type="submit" href="index.html" style="width: 50px;"><i
+                  class="fa-solid fa-house"></i></a>
+              <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 50px;"><i
+                  class="fa-solid fa-calculator"></i></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Section -->
+    <section id="services" class="hero services">
+      <img src="assets/img/hero-bg.jpg" alt="">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12 text-center">
+            <h2>碳抵減試算器</h2>
+          </div>
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+
+                <i class="fa-solid fa-tree"></i>
+              </div>
+              <h3>自然碳匯</h3>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="開發面積">
+                <span class="input-group-text" id="basic-addon2">公頃</span>
+              </div>
+              <div class="input-group mb-3">
+                <label for="customRange2" class="form-label">公園綠地占比(%) 已選擇:
+                  <span id="A_text" class="text-bg-dark m-2 p-2"></span>%</label>
+                <br />
+                <input id="A_range" min="10" max="15" step="1" type="range" list="tickmarksA" class="form-range" />
+                <datalist id="tickmarksA">
+                  <option value="10" label="10%"></option>
+                  <option value="15" label="15%"></option>
+                </datalist>
+              </div>
+
+              <div class="input-group mb-3">
+                <label for="customRange2" class="form-label">屋頂綠化率(%) 已選擇:
+                  <span id="B_text" class="text-bg-dark m-2 p-2"></span>%</label>
+                <br />
+                <input id="B_range" min="0" max="50" step="1" type="range" list="tickmarksB" class="form-range" />
+                <datalist id="tickmarksB">
+                  <option value="0" label="0%"></option>
+                  <option value="50" label="50%"></option>
+                </datalist>
+              </div>
+
+              <div class="input-group mb-3">
+                <label for="customRange2" class="form-label">法定空地綠化率(%) 已選擇:
+                  <span id="C_text" class="text-bg-dark m-2 p-2"></span>%</label>
+                <br />
+                <input id="C_range" min="0" max="50" step="1" type="range" list="tickmarksC" class="form-range" />
+                <datalist id="tickmarksC">
+                  <option value="0" label="0%"></option>
+                  <option value="50" label="50%"></option>
+                </datalist>
+              </div>
+              <a href="quick_c_result.html" class="badge rounded-pill text-bg-main mt-2">GO <i
+                  class="fa-regular fa-circle-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+          <div class="col-lg-12 col-md-6 bg-main" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <h3>計算結果</h3>
+              <p style="font-size: 1.5em;padding-bottom: 1%;">固碳量 <span class="hight-light">1000</span> <span
+                  style="font-size: 0.6em;">tCO2e</span></p>
+            </div>
+
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+
+                <i class="fa-solid fa-solar-panel"></i>
+              </div>
+              <h3>綠電設置</h3>
+
+
+              <a href="quick_c_result.html" class="badge rounded-pill text-bg-main mt-2">GO <i
+                  class="fa-regular fa-circle-right"></i></a>
+            </div>
+
+          </div><!-- End Service Item -->
+          <div class="col-lg-12 col-md-6 bg-main" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <h3>計算結果</h3>
+              <p style="font-size: 1.5em;padding-bottom: 1%;">減碳量 <span class="hight-light">250</span> <span
+                  style="font-size: 0.6em;">tCO2e</span></p>
+            </div>
+
+          </div><!-- End Service Item -->
+
+          <a href="main.html" class="badge rounded-pill text-bg-dark mt-5 ml-5"><i class="fa-solid fa-calculator"></i>
+            算其他項目</a>
+        </div>
+
+      </div>
+
+
+    </section>
+    <!-- /Section -->
+  </main>
+
+  <footer id="footer" class="footer position-relative text-start">
+    <div class="container">
+      <div class="text-start mb-3">
+        <span>版權聲明 | 本網站內容版權所有，未經書面許可禁止複製、散佈、修改或商業使用，引用請聯繫授權。
+          <br>免責聲明 | 本網站所提供的資訊主要基於公司自身經驗及政府公開資料進行估算，僅供參考之用。</span>
+      </div>
+      <div class="copyright">
+        <span>Copyright © 中興工程顧問股份有限公司 園區及路航工程部 2024</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    window.onload = function () {
+      // 處理公園綠地占比
+      const A_value = document.querySelector("#A_text");
+      const A_input = document.querySelector("#A_range");
+      A_value.textContent = A_input.value;
+      A_input.addEventListener("input", (event) => {
+        A_value.textContent = event.target.value;
+      });
+
+      // 處理屋頂綠化率
+      const B_value = document.querySelector("#B_text");
+      const B_input = document.querySelector("#B_range");
+      B_value.textContent = B_input.value;
+      B_input.addEventListener("input", (event) => {
+        B_value.textContent = event.target.value;
+      });
+
+      // 處理法空綠化率
+      const C_value = document.querySelector("#C_text");
+      const C_input = document.querySelector("#C_range");
+      C_value.textContent = C_input.value;
+      C_input.addEventListener("input", (event) => {
+        C_value.textContent = event.target.value;
+      });
+
+      // 綠色運輸比例
+      const D_value = document.querySelector("#D_text");
+      const D_input = document.querySelector("#D_range");
+      D_value.textContent = D_input.value;
+      D_input.addEventListener("input", (event) => {
+        D_value.textContent = event.target.value;
+      });
+
+    };
+  </script>
+
+
+</body>
+
+</html>

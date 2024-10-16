@@ -11,7 +11,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #29C9C1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: rbg(81,222,181); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -400,7 +400,7 @@ h6 {
 
 .services .service-item p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 
@@ -623,15 +623,23 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
-  color:#29C9C1;
+  color:rgba(18, 240, 221);
   text-shadow: black 0.05em 0.05em 0.05em;
 }
 
 .hero h3{
   margin: 0;
-  font-size: 2em;
-  font-weight: 700;
-  color:#29C9C1;
+  font-size: 2.5em;
+  font-weight: 900;
+  color:#45505b;
+  /* -webkit-text-stroke: 1px rgb(16, 212, 196); */
+  /* text-shadow: rgb(2, 66, 75) 0.05em 0.05em 0.05em; */
+}
+
+.hight-light {
+  background-image: linear-gradient(transparent 70%, rgba(18, 240, 221) 30%);
+  margin: 0rem 1rem;
+  padding: 0rem 1rem;
 }
 
 .hero .card-text{
@@ -671,24 +679,46 @@ section,
 
 .btn-main{
   --bs-btn-color: #fff;
-  --bs-btn-bg: rgba(41,201,193);
-  --bs-btn-border-color: rgba(41,201,193);
+  --bs-btn-bg: rgba(18, 240, 221);
+  --bs-btn-border-color: rgba(18, 240, 221);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(16, 109, 104);
-  --bs-btn-hover-border-color: rgb(16, 109, 104);
+  --bs-btn-hover-bg: #45505b;
+  --bs-btn-hover-border-color: #45505b;
   --bs-btn-focus-shadow-rgb: 41, 201, 193;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(16, 109, 104);
-  --bs-btn-active-border-color: rgb(16, 109, 104);
+  --bs-btn-active-bg: #45505b;
+  --bs-btn-active-border-color: #45505b;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: rgba(41,201,193);
-  --bs-btn-disabled-border-color: rgba(41,201,193);
+  --bs-btn-disabled-bg: rgba(18, 240, 221);
+  --bs-btn-disabled-border-color: rgba(18, 240, 221);
+}
+
+.btn-outline-main {
+  --bs-btn-color: rgb(18, 240, 221);
+  --bs-btn-border-color: rgba(18, 240, 221);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgba(18, 240, 221);
+  --bs-btn-hover-border-color: rgba(18, 240, 221);
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgba(18, 240, 221);
+  --bs-btn-active-border-color: rgba(18, 240, 221);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: rgba(18, 240, 221);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: rgba(18, 240, 221);
+  --bs-gradient: none;
 }
 
 .text-bg-main{
-  color: #fff;
-  background-color: rgb(16, 109, 104);
+  color: #45505b;
+  background-color: rgba(18, 240, 221);
+}
+
+.bg-main {
+  --bs-bg-opacity: 1;
+  background-color: rgba(18, 240, 221) !important;
 }
 
 @media (max-width: 768px) {
@@ -702,17 +732,22 @@ section,
     padding-left: 2%;
   }
 
-  .hero a {
-    font-size: 1.5em;
-
-  }
-
   #logo img {
     width: 50px;
     height: 50px;
     margin-bottom: 2%;
     margin-left: 2%;
   }
+
+  .hero a {
+    font-size: 1.5em;
+
+  }
+
+  .hero img {
+    object-position: 60% center;
+  }
+
 
 }
 
