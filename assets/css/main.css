@@ -339,8 +339,9 @@ h6 {
 
 .services h4{
   margin: 0;
-  font-size: 1.2em;
-  padding-bottom: 5px;
+  font-size: 1.1em;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .services p {
@@ -730,7 +731,7 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 4em;
+    font-size: 3.5em;
     padding-left: 2%;
   }
 

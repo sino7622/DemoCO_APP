@@ -40,9 +40,9 @@
         const heading = document.getElementById('t');
         heading.insertAdjacentElement('afterend', paragraph);
 
-        // 設置按鈕的連結，將 title 傳遞到 carbon_d_result.html
+        // 設置按鈕的連結，將 title 傳遞到 quick_cd_result.html
         const goButton = document.getElementById('cdr-button');
-        goButton.href = `carbon_d_result.html?title=${encodeURIComponent(title)}`;
+        goButton.href = `quick_cd_result.html?title=${encodeURIComponent(title)}`;
         
     });
 </script>
@@ -85,7 +85,7 @@
             <div class="card">
               <div class="card-body">
                 <h3 class="card-title hight-light">自然碳匯</h3>
-                <h4>應用增加計畫區內不同綠化方式進行綠碳固碳</h4>
+                <h4>增加計畫區內不同綠化方式進行綠碳固碳</h4>
                 <p class="card-text pt-3">
                   <div class="input-group mb-3">
                     <label for="customRange2" class="form-label">公園綠地占比:
@@ -119,8 +119,6 @@
                       <option value="50" label="50%"></option>
                     </datalist>
                   </div>
-                
-
                 </p>
 
               </div>
@@ -132,7 +130,7 @@
             <div class="card">
               <div class="card-body">
                 <h3 class="card-title hight-light">綠色運輸</h3>
-                <h4>模擬計畫區內增加綠色運具使用比例漸少基底固碳</h4>
+                <h4>模擬計畫區內增加綠色運具使用比例減少基底固碳</h4>
                 <p class="card-text pt-3">
                   <div class="input-group mb-3">
                     <label for="customRange2" class="form-label">使用綠色運輸比例:
@@ -155,11 +153,8 @@
                 <h3 class="card-title hight-light">減碳設計</h3>
                 <h4>鼓勵低蘊含碳建築設計減少蘊含碳</h4>
                 <p class="card-text pt-3">
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                    <label class="form-check-label" for="flexSwitchCheckChecked">基礎設施工程低碳規劃</label>
-                  </div>
-                  <label class="form-label  mt-3">低碳建築等級</label> <br>
+                  
+                  <label class="form-label">低碳建築等級</label> <br>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
                     <label class="form-check-label" for="inlineRadio1">5</label>
@@ -183,6 +178,11 @@
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
                     <label class="form-check-label" for="inlineRadio6">1+</label>
+                  </div>
+
+                  <div class="form-check form-switch mt-3">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">基礎設施工程低碳規劃</label>
                   </div>
                   
                 </p>

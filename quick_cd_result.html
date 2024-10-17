@@ -33,14 +33,13 @@
       const urlParams = new URLSearchParams(window.location.search);
       const title = urlParams.get('title') || 'Default Title';
 
-      // 動態建立 <p> 並顯示 title
-      const paragraph = document.createElement('p');
+      // 動態建立 <h3> 並顯示 title
+      const paragraph = document.createElement('h3');
+      paragraph.className = 'card-title hight-light';
       paragraph.textContent = title;
-      paragraph.innerHTML = `<i class="fa-solid fa-location-crosshairs"></i> ${title}`;
-      paragraph.classList.add('dynamic-title');
 
-      // 將 <p> 插入在 <h2 id="t"> 下方
-      const heading = document.getElementById('t');
+      // 將 <h3> 插入在 <span id="t2"> 下方
+      const heading = document.getElementById('t2');
       heading.insertAdjacentElement('afterend', paragraph);
 
     });
@@ -60,9 +59,9 @@
               碳先知APP
             </a>
             <div class="d-flex">
-              <a class="btn btn-outline-dark" type="submit" href="index.html" style="width: 50px;"><i
+              <a class="btn btn-outline-dark" type="submit" href="index.html" style="width: 45px;"><i
                   class="fa-solid fa-house"></i></a>
-              <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 50px;"><i
+              <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 45px;"><i
                   class="fa-solid fa-calculator"></i></a>
 
             </div>
@@ -78,28 +77,35 @@
       <div class="container">
         <div class="row gy-4 justify-content-center">
           <div class="col-12 col-md-6 text-center">
-            <h2 id="t">試算結果</h2>
+            <h2>試算結果</h2>
           </div>
           <div class="col-12">
-            <div class="col-lg-12 col-md-6">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p class="card-text pt-3">
-                  <div class="row">
-                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-brands fa-cloudflare"></i> 總碳排量 <span
-                        class="hight-light">1000</span> <span style="font-size: 0.6em;">萬噸<span
-                          id="mathjax">\(CO_2e\)</span></span></p>
-                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-leaf"></i> 減碳後碳排量 <span
-                        class="hight-light">500</span> <span style="font-size: 0.6em;">萬噸<span
-                          id="mathjax">\(CO_2e\)</span></span></p>
-                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-chart-pie"></i> 減碳百分比 <span
-                        class="text-bg-light">50</span> <span style="font-size: 0.6em;">%</span></p>
+            <div class="card">
+              <div class="card-body text-center">
+                <span id="t2"></span>
+                <p class="card-text text-left">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-brands fa-cloudflare"></i> 總碳排量 <br><span
+                        class="hight-light">1000</span> <span style="font-size: 0.6em;">噸<span
+                        id="mathjax">\(CO_2e\)</span>/年</span></p>
+                  </div>
+                  <div class="col-md-4">
+                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-leaf"></i> 減碳後碳排量 <br><span
+                        class="hight-light">56</span> <span style="font-size: 0.6em;">噸<span
+                          id="mathjax">\(CO_2e\)</span>/年</span></p>
+                  </div>
+                  <div class="col-md-4">
+                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-chart-pie"></i> 減碳百分比 <br><span
+                      class="text-bg-light">50</span> <span style="font-size: 0.6em;">%</span></p>
                   </div>
                 </div>
                 </p>
               </div>
             </div>
           </div><!-- End Item -->
+
+          
           <a href="main.html" class="badge rounded-pill text-bg-dark mt-5 ml-5"><i class="fa-solid fa-calculator"></i>
             算其他項目</a>
         </div>

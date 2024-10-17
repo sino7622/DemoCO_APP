@@ -23,6 +23,9 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
+  <!-- MathJax -->
+  <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 </head>
 
 <body class="index-page">
@@ -37,9 +40,9 @@
               碳先知APP
             </a>
             <div class="d-flex">
-              <a class="btn btn-outline-dark" type="submit" href="index.html" style="width: 50px;"><i
+              <a class="btn btn-outline-dark" type="submit" href="index.html" style="width: 45px;"><i
                   class="fa-solid fa-house"></i></a>
-              <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 50px;"><i
+              <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 45px;"><i
                   class="fa-solid fa-calculator"></i></a>
             </div>
           </div>
@@ -49,7 +52,7 @@
     <!-- End Page Title -->
 
     <!-- Section -->
-    <section class="hero">
+    <section id="services" class="hero services">
       <img src="assets/img/hero-bg.jpg" alt="">
       <div class="container">
         <div class="row gy-4">
@@ -59,22 +62,25 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body text-center">
-                <h3 class="card-title hight-light">高速公路</h3>
+                <h3 class="card-title hight-light">高快速公路</h3>
                 <p class="card-text text-left mt-3">
                 <div class="row">
                   <div class="col-md-6">
                     <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-brands fa-cloudflare"></i> 總碳排量<br> <span
-                        class="hight-light">1000</span> <span style="font-size: 0.6em;">tCO2e</span></p>
+                        class="hight-light">1000</span> <span style="font-size: 0.6em;">噸<span
+                          id="mathjax">\(CO_2e\)</span>/年</span></p>
                   </div>
                   <div class="col-md-6">
                     <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-road"></i> 每公里碳排<br> <span
-                        class="hight-light">56</span> <span style="font-size: 0.6em;">tCO2e/km</span></p>
+                        class="hight-light">56</span> <span style="font-size: 0.6em;">噸<span
+                          id="mathjax">\(CO_2e\)</span>/km</span></p>
                   </div>
                 </div>
                 </p>
               </div>
             </div>
-          </div><a href="main.html" class="badge rounded-pill text-bg-dark mt-5"><i class="fa-solid fa-calculator"></i>
+          </div>
+          <a href="main.html" class="badge rounded-pill text-bg-dark mt-5"><i class="fa-solid fa-calculator"></i>
             算其他項目</a>
         </div>
         <!-- End Item -->
