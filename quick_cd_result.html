@@ -23,31 +23,29 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
 
+  <!-- MathJax -->
+  <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
   <script>
     window.addEventListener('DOMContentLoaded', function () {
-      // 從 URL 中取得 title 查詢參數
+      // 從 URL 中取得 title 參數
       const urlParams = new URLSearchParams(window.location.search);
       const title = urlParams.get('title') || 'Default Title';
 
-      // 動態建立 <p> 元素，並設置內容為 title
+      // 動態建立 <p> 並顯示 title
       const paragraph = document.createElement('p');
+      paragraph.textContent = title;
       paragraph.innerHTML = `<i class="fa-solid fa-location-crosshairs"></i> ${title}`;
-      paragraph.classList.add('dynamic-title'); // 加入 CSS 類名
+      paragraph.classList.add('dynamic-title');
 
       // 將 <p> 插入在 <h2 id="t"> 下方
       const heading = document.getElementById('t');
       heading.insertAdjacentElement('afterend', paragraph);
 
-      // 設置 GO 按鈕的連結，將 title 傳遞到 quick_c.html
-      const goButton1 = document.getElementById('goQ-button');
-      goButton1.href = `quick_c.html?title=${encodeURIComponent(title)}`;
-
-      // 設置 GO 按鈕的連結，將 title 傳遞到 quick_c.html
-      const goButton2 = document.getElementById('goD-button');
-      goButton2.href = `detail_c.html?title=${encodeURIComponent(title)}`;
-
     });
   </script>
+
 </head>
 
 <body class="index-page">
@@ -66,6 +64,7 @@
                   class="fa-solid fa-house"></i></a>
               <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 50px;"><i
                   class="fa-solid fa-calculator"></i></a>
+
             </div>
           </div>
         </nav>
@@ -77,39 +76,35 @@
     <section id="services" class="hero services">
       <img src="assets/img/hero-bg.jpg" alt="">
       <div class="container">
-        <div class="row gy-4">
-          <div class="col-12 text-center">
-            <h2 id="t">計算方式</h2>
+        <div class="row gy-4 justify-content-center">
+          <div class="col-12 col-md-6 text-center">
+            <h2 id="t">試算結果</h2>
           </div>
-
-          <div class="col-sm-6 mb-3 mb-sm-0">
-            <div class="card">
-
-              <div class="card-body">
-                <h3 class="card-title hight-light"><i class="fa-solid fa-jet-fighter"></i> 一鍵概算</h3>
-                <p class="card-text">
-                  依中興公司30年工程規劃設計經驗值，一鍵輸入進行總碳排量概算。
+          <div class="col-12">
+            <div class="col-lg-12 col-md-6">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p class="card-text pt-3">
+                  <div class="row">
+                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-brands fa-cloudflare"></i> 總碳排量 <span
+                        class="hight-light">1000</span> <span style="font-size: 0.6em;">萬噸<span
+                          id="mathjax">\(CO_2e\)</span></span></p>
+                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-leaf"></i> 減碳後碳排量 <span
+                        class="hight-light">500</span> <span style="font-size: 0.6em;">萬噸<span
+                          id="mathjax">\(CO_2e\)</span></span></p>
+                    <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-chart-pie"></i> 減碳百分比 <span
+                        class="text-bg-light">50</span> <span style="font-size: 0.6em;">%</span></p>
+                  </div>
+                </div>
                 </p>
-                <a href="" id="goQ-button" class="badge rounded-pill text-bg-main mt-2">GO <i
-                    class="fa-regular fa-circle-right"></i></a>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title hight-light"><i class="fa-solid fa-file-pen"></i> 分類估算</h3>
-                <p class="card-text">
-                  依個案性質，自行輸入相關參數，分別估算基底碳、蘊含碳﹐營運碳。
-                </p>
-                <a href="" id="goD-button" class="badge rounded-pill text-bg-main mt-2">GO <i
-                    class="fa-regular fa-circle-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- End Item -->
+          </div><!-- End Item -->
+          <a href="main.html" class="badge rounded-pill text-bg-dark mt-5 ml-5"><i class="fa-solid fa-calculator"></i>
+            算其他項目</a>
         </div>
+      </div>
+      </div>
       </div>
     </section>
     <!-- /Section -->

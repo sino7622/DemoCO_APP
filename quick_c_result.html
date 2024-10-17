@@ -15,17 +15,41 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- MathJax -->
+  <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      // 從 URL 中取得 title 參數
+      const urlParams = new URLSearchParams(window.location.search);
+      const title = urlParams.get('title') || 'Default Title';
+
+      // 動態建立 <p> 並顯示 title
+      const paragraph = document.createElement('p');
+      paragraph.textContent = title;
+      paragraph.innerHTML = `<i class="fa-solid fa-location-crosshairs"></i> ${title}`;
+      paragraph.classList.add('dynamic-title');
+
+      // 將 <p> 插入在 <h2 id="t"> 下方
+      const heading = document.getElementById('t');
+      heading.insertAdjacentElement('afterend', paragraph);
+
+      // 設置按鈕的連結，將 title 傳遞到 quick_cd_result.html
+      const goButton = document.getElementById('cd-button');
+      goButton.href = `quick_cd_result.html?title=${encodeURIComponent(title)}`;
+
+    });
+  </script>
+
 </head>
 
 <body class="index-page">
@@ -44,8 +68,6 @@
                   class="fa-solid fa-house"></i></a>
               <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 50px;"><i
                   class="fa-solid fa-calculator"></i></a>
-              <a class="btn btn-outline-dark" type="submit" href="calculation.html"
-                style="margin-left: 5%; width: 50px;"><i class="fa-solid fa-arrow-rotate-right"></i></a>
             </div>
           </div>
         </nav>
@@ -59,7 +81,7 @@
       <div class="container">
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-12 col-md-6 text-center">
-            <h2>試算結果</h2>
+            <h2 id="t">試算結果</h2>
           </div>
           <div class="col-12">
             <div class="col-lg-12 col-md-6">
@@ -69,11 +91,16 @@
                   <p class="card-text text-left">
                   <div class="row">
                     <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-brands fa-cloudflare"></i> 總碳排量 <br><span
-                        class="hight-light">1000</span> <span style="font-size: 0.6em;">tCO2e</span></p>
+                        class="hight-light">1000</span> <span style="font-size: 0.6em;">萬噸<span
+                          id="mathjax">\(CO_2e\)</span>(以50年計)</span></p>
                     <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-people-group"></i> 人均碳排
-                      <br><span class="hight-light">56</span> <span style="font-size: 0.6em;">tCO2e/人</span></p>
+                      <br><span class="hight-light">56</span> <span style="font-size: 0.6em;">噸<span
+                          id="mathjax">\(CO_2e\)</span>/人*年</span>
+                    </p>
                     <p style="font-size: 2em;padding-bottom: 1%;"><i class="fa-solid fa-layer-group"></i> 單位面積碳排
-                      <br><span class="hight-light">298</span> <span style="font-size: 0.6em;">tCO2e/公頃</span></p>
+                      <br><span class="hight-light">298</span> <span style="font-size: 0.6em;">噸<span
+                          id="mathjax">\(CO_2e\)</span>/公頃</span>
+                    </p>
                   </div>
                   </p>
 
@@ -83,7 +110,7 @@
 
           </div>
           <!-- End Item -->
-          <a href="carbon_d.html" class="badge rounded-pill text-bg-main mt-5"><i class="fa-brands fa-pagelines"></i>
+          <a href="" id="cd-button" class="badge rounded-pill text-bg-main mt-5"><i class="fa-brands fa-pagelines"></i>
             碳抵減試算</a>
           <a href="main.html" class="badge rounded-pill text-bg-dark"><i class="fa-solid fa-calculator"></i> 算其他項目</a>
         </div>

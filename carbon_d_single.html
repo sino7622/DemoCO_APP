@@ -15,17 +15,17 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- MathJax -->
+  <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 </head>
 
 <body class="index-page">
@@ -44,6 +44,8 @@
                   class="fa-solid fa-house"></i></a>
               <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 50px;"><i
                   class="fa-solid fa-calculator"></i></a>
+              <a class="btn btn-outline-dark" type="submit" href="calculation.html"
+                style="margin-left: 5%; width: 50px;"><i class="fa-solid fa-arrow-rotate-right"></i></a>
             </div>
           </div>
         </nav>
@@ -68,8 +70,8 @@
               <h3>自然碳匯</h3>
               <div class="input-group mb-3">
                 <span class="input-group-text">開發面積</span>
-                  <input type="text" class="form-control">
-                  <span class="input-group-text">公頃</span>
+                <input type="text" class="form-control">
+                <span class="input-group-text">公頃</span>
               </div>
               <div class="input-group mb-3">
                 <label for="customRange2" class="form-label">公園綠地占比:
@@ -107,11 +109,11 @@
                   class="fa-regular fa-circle-right"></i></a>
             </div>
           </div><!-- End Service Item -->
-          <div class="col-lg-12 col-md-6 bg-main"  id="result1">
+          <div class="col-lg-12 col-md-6 bg-main" id="result1">
             <div class="service-item  position-relative">
               <h3>計算結果</h3>
               <p style="font-size: 1.5em;padding-bottom: 1%;">固碳量 <span class="hight-light">1000</span> <span
-                  style="font-size: 0.6em;">tCO2e</span></p>
+                  style="font-size: 0.6em;">噸<span id="mathjax">\(CO_2e\)</span>/年</span></p>
             </div>
 
           </div><!-- End Service Item -->
@@ -133,24 +135,23 @@
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text">開發面積</span>
-                  <input type="text" class="form-control">
-                  <span class="input-group-text">公頃</span>
+                <input type="text" class="form-control">
+                <span class="input-group-text">公頃</span>
               </div>
               <div class="input-group mb-3">
-                  <span class="input-group-text">小型風機</span>
-                  <input type="text" class="form-control">
-                  <span class="input-group-text">支</span>
+                <span class="input-group-text">小型風機</span>
+                <input type="text" class="form-control">
+                <span class="input-group-text">支</span>
               </div>
               <a href="#result2" class="badge rounded-pill text-bg-main mt-2">GO <i
                   class="fa-regular fa-circle-right"></i></a>
             </div>
-
           </div><!-- End Service Item -->
           <div class="col-lg-12 col-md-6 bg-main" id="result2">
             <div class="service-item  position-relative">
               <h3>計算結果</h3>
               <p style="font-size: 1.5em;padding-bottom: 1%;">減碳量 <span class="hight-light">250</span> <span
-                  style="font-size: 0.6em;">tCO2e</span></p>
+                  style="font-size: 0.6em;">噸<span id="mathjax">\(CO_2e\)</span>/年</span></p>
             </div>
 
           </div><!-- End Service Item -->
@@ -158,10 +159,7 @@
           <a href="main.html" class="badge rounded-pill text-bg-dark mt-5 ml-5"><i class="fa-solid fa-calculator"></i>
             算其他項目</a>
         </div>
-
       </div>
-
-
     </section>
     <!-- /Section -->
   </main>

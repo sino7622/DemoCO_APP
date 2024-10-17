@@ -15,9 +15,6 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
@@ -26,6 +23,30 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+        // 從 URL 中取得 title 參數
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title') || 'Default Title';
+
+        // 動態建立 <p> 並顯示 title
+        const paragraph = document.createElement('p');
+        paragraph.textContent = title;
+        paragraph.innerHTML = `<i class="fa-solid fa-location-crosshairs"></i> ${title}`;
+        paragraph.classList.add('dynamic-title');
+
+        // 將 <p> 插入在 <h2 id="t"> 下方
+        const heading = document.getElementById('t');
+        heading.insertAdjacentElement('afterend', paragraph);
+
+        // 設置按鈕的連結，將 title 傳遞到 carbon_d_result.html
+        const goButton = document.getElementById('cdr-button');
+        goButton.href = `carbon_d_result.html?title=${encodeURIComponent(title)}`;
+        
+    });
+</script>
+
 </head>
 
 <body class="index-page">
@@ -57,13 +78,14 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-12 text-center">
-            <h2>減碳作為</h2>
+            <h2 id="t">減碳作為</h2>
           </div>
 
           <div class="col-sm-6 mb-sm-0">
             <div class="card">
               <div class="card-body">
                 <h3 class="card-title hight-light">自然碳匯</h3>
+                <h4>應用增加計畫區內不同綠化方式進行綠碳固碳</h4>
                 <p class="card-text pt-3">
                   <div class="input-group mb-3">
                     <label for="customRange2" class="form-label">公園綠地占比:
@@ -110,6 +132,7 @@
             <div class="card">
               <div class="card-body">
                 <h3 class="card-title hight-light">綠色運輸</h3>
+                <h4>模擬計畫區內增加綠色運具使用比例漸少基底碳</h4>
                 <p class="card-text pt-3">
                   <div class="input-group mb-3">
                     <label for="customRange2" class="form-label">使用綠色運輸比例:
@@ -130,12 +153,13 @@
             <div class="card">
               <div class="card-body">
                 <h3 class="card-title hight-light">減碳設計</h3>
+                <h4>鼓勵低蘊含碳建築設計減少蘊含碳</h4>
                 <p class="card-text pt-3">
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                    <label class="form-check-label" for="flexSwitchCheckChecked">使用低碳工程</label>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">基礎設施工程低碳規劃</label>
                   </div>
-                  <label class="form-label  mt-3">建築碳排等級</label> <br>
+                  <label class="form-label  mt-3">低碳建築等級</label> <br>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
                     <label class="form-check-label" for="inlineRadio1">5</label>
@@ -170,6 +194,7 @@
             <div class="card">
               <div class="card-body">
                 <h3 class="card-title hight-light">建築能效</h3>
+                <h4>提升計畫區內建築能效等級減少營運碳</h4>
                 <p class="card-text pt-3">
                   <label class="form-label">建築能效等級</label> <br>
                   <div class="form-check form-check-inline">
@@ -205,6 +230,7 @@
             <div class="card">
               <div class="card-body">
                 <h3 class="card-title hight-light">綠電設置</h3>
+                <h4>導入綠電設施減少蘊含碳</h4>
                 <p class="card-text pt-3">
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
@@ -225,7 +251,7 @@
           </div><!-- End Item -->
 
 
-          <a href="carbon_d_result.html" class="badge rounded-pill text-bg-main mt-5">GO <i
+          <a href="" id="cdr-button" class="badge rounded-pill text-bg-main mt-5">GO <i
               class="fa-regular fa-circle-right"></i></a>
         </div>
       </div>

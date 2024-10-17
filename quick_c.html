@@ -15,17 +15,36 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   
-
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+        // 從 URL 中取得 title 參數
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title') || 'Default Title';
+
+        // 動態建立 <p> 並顯示 title
+        const paragraph = document.createElement('p');
+        paragraph.textContent = title;
+        paragraph.innerHTML = `<i class="fa-solid fa-location-crosshairs"></i> ${title}`;
+        paragraph.classList.add('dynamic-title');
+
+        // 將 <p> 插入在 <h2 id="t"> 下方
+        const heading = document.getElementById('t');
+        heading.insertAdjacentElement('afterend', paragraph);
+
+        // 設置按鈕的連結，將 title 傳遞到 quick_c_result.html
+        const goButton = document.getElementById('NextQ-button');
+        goButton.href = `quick_c_result.html?title=${encodeURIComponent(title)}`;
+        
+    });
+</script>
 </head>
 
 <body class="index-page">
@@ -59,7 +78,7 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-12 text-center">
-            <h2>一鍵概算</h2>
+            <h2 id="t">一鍵概算</h2>
           </div>
 
           <div class="col-12">
@@ -78,7 +97,7 @@
                     </div>
                   </div>
                 </p>
-                <a href="quick_c_result.html" class="badge rounded-pill text-bg-main mt-2">NEXT <i
+                <a href="" id="NextQ-button" class="badge rounded-pill text-bg-main mt-2">NEXT <i
                     class="fa-regular fa-circle-right"></i></a>
               </div>
             </div>

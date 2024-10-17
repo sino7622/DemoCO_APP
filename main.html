@@ -15,7 +15,6 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -23,6 +22,29 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+    const buttons = [
+        { id: 'science_p1', title: '科學園區' },
+        { id: 'industry_p1', title: '產業園區' },
+        { id: 'redistricting_p1', title: '市地重劃' },
+        { id: 'expropriation_p1', title: '區段徵收' }
+    ];
+
+    buttons.forEach(button => {
+        document.getElementById(button.id).addEventListener('click', function (event) {
+            event.preventDefault(); // 防止 <a> 預設行為
+            navigateToPage(`calculation.html?title=${encodeURIComponent(button.title)}`);
+        });
+    });
+});
+
+function navigateToPage(url) {
+    window.location.href = url; // 導向 calculation.html 並附帶參數
+}
+  </script>
+
 
 </head>
 
@@ -57,17 +79,16 @@
           <div class="col-12 text-center">
             <h2>試算項目</h2>
           </div>  
-
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <div class="icon">
-                
+              <div class="icon">               
                 <i class="fa-solid fa-building-wheat"></i>
               </div>
               <h3>園區開發</h3>
-              <p>園區開發指針對特定區域進行土地利用與基礎設施建設。本試算器依據規劃、設計與施工階段進行碳排放估算，提供可持續發展的參考依據。</p>
-              <a href="calculation.html" class="badge rounded-pill text-bg-main mt-2">科學園區試算 <i class="fa-regular fa-circle-right"></i></a>
-              <a href="calculation.html" class="badge rounded-pill text-bg-main mt-2">產業園區試算 <i class="fa-regular fa-circle-right"></i></a>
+              <p>我國園區按主管機關分為科學園區、產業區園區、科技產業園區、農業科技園區、自由貿易港區、環保科技園區等6類，配合產業發展政策，設置相應之公共設施，促進產群聚並減少其外部性。本試算器以常見之科學園區、產業區園區為例，試算其全生命週期碳排放量。
+              </p>
+              <a href="" id="science_p1" class="badge rounded-pill text-bg-main mt-2">科學園區試算 <i class="fa-regular fa-circle-right"></i></a>
+              <a href="" id="industry_p1" class="badge rounded-pill text-bg-main mt-2">產業園區試算 <i class="fa-regular fa-circle-right"></i></a>
             </div>
             
           </div><!-- End Service Item -->
@@ -78,9 +99,10 @@
                 <i class="fa-solid fa-tree-city"></i>
               </div>
               <h3>都市開發</h3>
-              <p>都市開發是一種全面的規劃與建設方式，涵蓋土地利用、基礎設施及經濟發展。本試算器依都市開發的各階段進行碳排放估算，評估其環境影響。</p>
-              <a href="calculation.html" class="badge rounded-pill text-bg-main mt-2">市地重劃試算 <i class="fa-regular fa-circle-right"></i></a>
-              <a href="calculation.html" class="badge rounded-pill text-bg-main mt-2">區段徵收試算 <i class="fa-regular fa-circle-right"></i></a>
+              <p>整體開發是指將一定範圍內土地重新規劃整理，配合國土發展政策，設置適當公共設施，改善市民生活品質。其常見方式有「區段徵收」及「市地重劃」。本試算器依整體開發的「規劃」、「施工」及「營運」3階段進行碳排放試算。
+              </p>
+              <a href="" id="redistricting_p1"  class="badge rounded-pill text-bg-main mt-2">市地重劃試算 <i class="fa-regular fa-circle-right"></i></a>
+              <a  href="" id="expropriation_p1"  class="badge rounded-pill text-bg-main mt-2">區段徵收試算 <i class="fa-regular fa-circle-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -90,7 +112,8 @@
                 <i class="fa-solid fa-road"></i>
               </div>
               <h3>高速公路</h3>
-              <p>高速公路工程開發旨在提升交通效率並促進經濟發展。本試算器根據施工過程與材料的碳排放進行估算，提供參考數據，評估工程對環境的影響。</p>
+              <p>高速公路為國家重大交通建設之一，為邁向運輸淨零的要徑之一，本試算器以可行性規劃階段的路、橋、隧長度為基礎，進行工程碳排放的概算，後續將逐步發展細部設計、施工與營運階段之試算器，供業主與設計單位評估參據。
+              </p>
               <a href="hightway_c.html" class="badge rounded-pill text-bg-main mt-2">高速公路試算 <i class="fa-regular fa-circle-right"></i></a>
             </div>
           </div><!-- End Service Item -->
@@ -100,8 +123,9 @@
               <div class="icon">
                 <i class="fa-brands fa-envira"></i>
               </div>
-              <h3>碳抵減試算器</h3>
-              <p>碳抵減試算是一種評估減少溫室氣體排放的工具，能衡量自然碳匯及綠電等措施的碳減排效果，為使用者提供參考數據，幫助制定可持續發展策略。</p>
+              <h3>碳抵減計算器</h3>
+              <p>在人居環境中「增加自然碳匯」及「設置再生能源」2大主要減碳作為，本試算器可協助掌握投入減碳作為的年固碳量。
+              </p>
               <a href="carbon_d_single.html" class="badge rounded-pill text-bg-main mt-2">碳抵減試算 <i class="fa-regular fa-circle-right"></i></a>
             </div>
           </div><!-- End Service Item -->

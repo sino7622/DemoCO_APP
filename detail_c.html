@@ -15,9 +15,6 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
@@ -26,6 +23,30 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+        // 從 URL 中取得 title 參數
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title') || 'Default Title';
+
+        // 動態建立 <p> 並顯示 title
+        const paragraph = document.createElement('p');
+        paragraph.textContent = title;
+        paragraph.innerHTML = `<i class="fa-solid fa-location-crosshairs"></i> ${title}`;
+        paragraph.classList.add('dynamic-title');
+
+        // 將 <p> 插入在 <h2 id="t"> 下方
+        const heading = document.getElementById('t');
+        heading.insertAdjacentElement('afterend', paragraph);
+
+        // 設置按鈕的連結，將 title 傳遞到 detail_c_result.html
+        const goButton = document.getElementById('dcr-button');
+        goButton.href = `detail_c_result.html?title=${encodeURIComponent(title)}`;
+        
+    });
+</script>
+
 </head>
 
 <body class="index-page">
@@ -59,7 +80,7 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-12 text-center">
-            <h2>分類估算</h2>
+            <h2 id="t">分類輸入</h2>
           </div>
 
           <div class="col-12">
@@ -88,17 +109,10 @@
                       <span class="input-group-text">人</span>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="input-group mb-3">
-                      <span class="input-group-text">可建築土地占比</span>
-                      <input type="text" class="form-control">
-                      <span class="input-group-text">%</span>
-                    </div>
-                  </div>
-                </div>
+                  
                 <div class="row">
-                  <p style="font-size: 1.5em;">產業別占比</p>
-                  <div class="col-md-3">
+                  <p style="font-size: 1.5em;">產業別占比(總計100%)</p>
+                  <div class="col-md-3 mt-2">
                     <div class="input-group">
                       <span class="input-group-text">高</span>
                       <input type="text" class="form-control">
@@ -132,10 +146,10 @@
                   </div>
                 </div>
                 <div class="row">
-                  <p style="font-size: 1.5em;">各用地建蔽率</p>
+                  <p style="font-size: 1.5em;">可發展用地(住/工/商)占比</p>
                   <div class="col-md-4">
                     <div class="input-group mb-3">
-                      <span class="input-group-text">丁建</span>
+                      <span class="input-group-text">工業</span>
                       <input type="text" class="form-control">
                       <span class="input-group-text">%</span>
                     </div>
@@ -156,10 +170,10 @@
                   </div>
                 </div>
                 <div class="row">
-                  <p style="font-size: 1.5em;">各用地容積率</p>
+                  <p style="font-size: 1.5em;">各類型用地建蔽率</p>
                   <div class="col-md-4">
                     <div class="input-group mb-3">
-                      <span class="input-group-text">丁建</span>
+                      <span class="input-group-text">工業</span>
                       <input type="text" class="form-control">
                       <span class="input-group-text">%</span>
                     </div>
@@ -179,15 +193,37 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              </p>
-             
+                <div class="row">
+                  <p style="font-size: 1.5em;">各類型用地容積率</p>
+                  <div class="col-md-4">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">工業</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">住宅</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">商業</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>             
+              </p>            
             </div>
-            <div class="row justify-content-center"><a href="detail_c_result.html" class="badge rounded-pill text-bg-main mt-2 m-5 shadow">GO <i
-              class="fa-regular fa-circle-right"></i></a> </div>
-            
           </div>
+          <div class="row justify-content-center">
+            <a href="" id="dcr-button" class="badge rounded-pill text-bg-main mt-2 m-5 shadow">GO <i
+              class="fa-regular fa-circle-right"></i></a> </div>
         </div>
       </div>
       <!-- End Item -->

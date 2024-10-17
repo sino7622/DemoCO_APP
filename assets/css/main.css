@@ -1,35 +1,12 @@
 
 /* Fonts */
-/* :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
-} */
-
-/*字體-仙人掌明體*/
-/* @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
-*{
-  font-family: 'Cactus Classical Serif';
-  } */
-
-/*字體-霞鶩文楷*/
-/* @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=LXGW+WenKai+TC&display=swap');
-*{
-  font-family: 'LXGW WenKai TC';
-  } */
-
-/*字體-思源宋體*/
-@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&display=swap');
-*{
-  font-family: 'Noto Serif TC';
+  @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Chocolate+Classical+Sans&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&display=swap');
+  :root {
+    --default-font: "Roboto","Chocolate Classical Sans", sans-serif;
+    --heading-font: "Roboto","Chocolate Classical Sans", sans-serif;
+    --nav-font: "Poppins","Chocolate Classical Sans",  sans-serif;
   }
-
-/*字體-朱古力黑體*/
-/* @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Chocolate+Classical+Sans&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&display=swap');
-*{
-  font-family: 'Chocolate Classical Sans';
-  } */
-
+  
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
@@ -359,11 +336,11 @@ h6 {
   /* text-shadow: black 0.05em 0.05em 0.05em; */
 }
 
-.services h3{
+
+.services h4{
   margin: 0;
-  font-size: 2.5em;
-  font-weight: 700;
-  color:rgb(16, 109, 104);
+  font-size: 1.2em;
+  padding-bottom: 5px;
 }
 
 .services p {
@@ -373,6 +350,7 @@ h6 {
 
 .services a {
   font-size: 1.5em;
+  font-weight: 100;
 }
 
 .services .service-item {
@@ -654,7 +632,7 @@ section,
 .hero h3{
   margin: 0;
   font-size: 2.5em;
-  font-weight: 900;
+  font-weight: 100;
   color:#45505b;
   /* -webkit-text-stroke: 1px rgb(16, 212, 196); */
   /* text-shadow: rgb(2, 66, 75) 0.05em 0.05em 0.05em; */
@@ -699,6 +677,11 @@ section,
 
 .hero a {
   font-size: 1.5em;
+}
+
+.dynamic-title{
+  color: #fff;
+  font-size: 2em !important;
 }
 
 .btn-main{
