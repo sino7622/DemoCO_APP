@@ -609,14 +609,6 @@ section,
   z-index: 2;
 }
 
-#startpage:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 80%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
 .hero .container {
   position: relative;
   z-index: 3;

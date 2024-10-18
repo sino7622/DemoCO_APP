@@ -25,24 +25,24 @@
 
   <script>
     window.addEventListener('DOMContentLoaded', function () {
-    const buttons = [
+      const buttons = [
         { id: 'science_p1', title: '科學園區' },
         { id: 'industry_p1', title: '產業園區' },
         { id: 'redistricting_p1', title: '市地重劃' },
         { id: 'expropriation_p1', title: '區段徵收' }
-    ];
+      ];
 
-    buttons.forEach(button => {
+      buttons.forEach(button => {
         document.getElementById(button.id).addEventListener('click', function (event) {
-            event.preventDefault(); // 防止 <a> 預設行為
-            navigateToPage(`calculation.html?title=${encodeURIComponent(button.title)}`);
+          event.preventDefault(); // 防止 <a> 預設行為
+          navigateToPage(`calculation.html?title=${encodeURIComponent(button.title)}`);
         });
+      });
     });
-});
 
-function navigateToPage(url) {
-    window.location.href = url; // 導向 calculation.html 並附帶參數
-}
+    function navigateToPage(url) {
+      window.location.href = url; // 導向 calculation.html 並附帶參數
+    }
   </script>
 
 
@@ -52,45 +52,47 @@ function navigateToPage(url) {
 
 
   <main class="main">
-<!-- Page Title -->
-<div class="page-title" data-aos="fade">
-  <div class="container">
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/img/favicon.png" width="30" height="30" class="d-inline-block align-text-center"/>
-                碳先知APP
-        </a>
-        <div class="d-flex">
-          <a class="btn btn-outline-dark" type="submit"  href="index.html"><i class="fa-solid fa-house"></i></a>
-        </div>
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/favicon.png" width="30" height="30" class="d-inline-block align-text-center" />
+              碳先知APP
+            </a>
+            <div class="d-flex">
+              <a class="btn btn-outline-dark" type="submit" href="index.html"><i class="fa-solid fa-house"></i></a>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
-  </div>
-</div><!-- End Page Title -->
+    </div><!-- End Page Title -->
 
-          <!-- Services Section -->
+    <!-- Services Section -->
     <section id="services" class="hero services">
       <img src="assets/img/hero-bg.jpg" alt="">
- 
+
       <div class="container">
 
         <div class="row gy-4">
           <div class="col-12 text-center">
             <h2>試算項目</h2>
-          </div>  
+          </div>
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <div class="icon">               
+              <div class="icon">
                 <i class="fa-solid fa-building-wheat"></i>
               </div>
               <h3>園區開發</h3>
               <p>以科學園區、產業區園區為例，試算其全生命週期碳排放量。
               </p>
-              <a href="" id="science_p1" class="badge rounded-pill text-bg-main mt-2">科學園區試算 <i class="fa-regular fa-circle-right"></i></a>
-              <a href="" id="industry_p1" class="badge rounded-pill text-bg-main mt-2">產業園區試算 <i class="fa-regular fa-circle-right"></i></a>
+              <a href="" id="science_p1" class="badge rounded-pill text-bg-main mt-2">科學園區試算 <i
+                  class="fa-regular fa-circle-right"></i></a>
+              <a href="" id="industry_p1" class="badge rounded-pill text-bg-main mt-2">產業園區試算 <i
+                  class="fa-regular fa-circle-right"></i></a>
             </div>
-            
+
           </div><!-- End Service Item -->
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -101,8 +103,10 @@ function navigateToPage(url) {
               <h3>都市開發</h3>
               <p>依整體開發的規劃、施工及營運，3階段進行碳排放試算。
               </p>
-              <a href="" id="redistricting_p1"  class="badge rounded-pill text-bg-main mt-2">市地重劃試算 <i class="fa-regular fa-circle-right"></i></a>
-              <a  href="" id="expropriation_p1"  class="badge rounded-pill text-bg-main mt-2">區段徵收試算 <i class="fa-regular fa-circle-right"></i></a>
+              <a href="" id="redistricting_p1" class="badge rounded-pill text-bg-main mt-2">市地重劃試算 <i
+                  class="fa-regular fa-circle-right"></i></a>
+              <a href="" id="expropriation_p1" class="badge rounded-pill text-bg-main mt-2">區段徵收試算 <i
+                  class="fa-regular fa-circle-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -112,9 +116,10 @@ function navigateToPage(url) {
                 <i class="fa-solid fa-road"></i>
               </div>
               <h3>高快速公路</h3>
-              <p>以可行性規劃階段的路、橋、隧長度為基礎，進行工程碳排放的概算。
+              <p>以可行性規劃階段的路、橋、隧道長度為基礎，進行工程碳排放的概算。
               </p>
-              <a href="hightway_c.html" class="badge rounded-pill text-bg-main mt-2">高快速公路試算 <i class="fa-regular fa-circle-right"></i></a>
+              <a href="hightway_c.html" class="badge rounded-pill text-bg-main mt-2">高快速公路試算 <i
+                  class="fa-regular fa-circle-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -126,11 +131,12 @@ function navigateToPage(url) {
               <h3>碳抵減計算器</h3>
               <p>以「增加自然碳匯」及「設置再生能源」2大主要減碳作為，進行試算。
               </p>
-              <a href="carbon_d_single.html" class="badge rounded-pill text-bg-main mt-2">碳抵減試算 <i class="fa-regular fa-circle-right"></i></a>
+              <a href="carbon_d_single.html" class="badge rounded-pill text-bg-main mt-2">碳抵減試算 <i
+                  class="fa-regular fa-circle-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
-          
+
 
         </div>
 
@@ -143,17 +149,18 @@ function navigateToPage(url) {
   <footer id="footer" class="footer position-relative text-start">
     <div class="container">
       <div class="text-start mb-3">
-     <span>版權聲明 | 本網站內容版權所有，未經書面許可禁止複製、散佈、修改或商業使用，引用請聯繫授權。
-     <br>免責聲明 | 本網站所提供的資訊主要基於公司自身經驗及政府公開資料進行估算，僅供參考之用。</span>
+        <span>版權聲明 | 本網站內容版權所有，未經書面許可禁止複製、散佈、修改或商業使用，引用請聯繫授權。
+          <br>免責聲明 | 本網站所提供的資訊主要基於公司自身經驗及政府公開資料進行估算，僅供參考之用。</span>
       </div>
-        <div class="copyright">
+      <div class="copyright">
         <span>Copyright © 中興工程顧問股份有限公司 園區及路航工程部 2024</span>
       </div>
     </div>
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <!-- <div id="preloader"></div> -->
