@@ -42,9 +42,13 @@
       const goButton1 = document.getElementById('goQ-button');
       goButton1.href = `quick_c.html?title=${encodeURIComponent(title)}`;
 
-      // 設置 GO 按鈕的連結，將 title 傳遞到 quick_c.html
-      const goButton2 = document.getElementById('goD-button');
-      goButton2.href = `detail_c.html?title=${encodeURIComponent(title)}`;
+      // 設置 GO 按鈕的連結，將 title 傳遞到 detail_c.html
+      const goButton = document.getElementById('goD-button');
+      if (title === '科學園區' || title === '產業園區') {
+        goButton.href = `detail_c_park.html?title=${encodeURIComponent(title)}`;
+      } else {
+        goButton.href = `detail_c_city.html?title=${encodeURIComponent(title)}`;
+      }
 
     });
   </script>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>碳先知APP</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+        // 從 URL 中取得 title 參數
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title') || 'Default Title';
+
+        // 動態建立 <p> 並顯示 title
+        const paragraph = document.createElement('p');
+        paragraph.textContent = title;
+        paragraph.innerHTML = `<i class="fa-solid fa-location-crosshairs"></i> ${title}`;
+        paragraph.classList.add('dynamic-title');
+
+        // 將 <p> 插入在 <h2 id="t"> 下方
+        const heading = document.getElementById('t');
+        heading.insertAdjacentElement('afterend', paragraph);
+
+        // 設置按鈕的連結，將 title 傳遞到 detail_c_result.html
+        const goButton = document.getElementById('dcr-button');
+        goButton.href = `detail_c_result.html?title=${encodeURIComponent(title)}`;
+        
+    });
+</script>
+
+</head>
+
+<body class="index-page">
+  <main class="main">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/favicon.png" width="30" height="30" class="d-inline-block align-text-center" />
+              碳先知APP
+            </a>
+            <div class="d-flex">
+              <a class="btn btn-outline-dark" type="submit" href="index.html" style="width: 45px;"><i
+                  class="fa-solid fa-house"></i></a>
+              <a class="btn btn-outline-dark" type="submit" href="main.html" style="margin-left: 5%; width: 45px;"><i
+                  class="fa-solid fa-calculator"></i></a>
+              <a class="btn btn-outline-dark" type="submit" href="calculation.html"
+                style="margin-left: 5%; width: 45px;"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Section -->
+    <section id="services" class="hero ervices">
+      <img src="assets/img/hero-bg.jpg" alt="">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12 text-center">
+            <h2 id="t">分類輸入</h2>
+          </div>
+
+          <div class="col-12">
+            <div class="card">
+
+              <div class="card-body text-center">
+
+                <h3 class="card-title hight-light">輸入面積</h3>
+                <p class="card-text pt-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="開發面積">
+                      <span class="input-group-text" id="basic-addon2">公頃</span>
+                    </div>
+                  </div>
+                </div>
+                </p>
+                <h3 class="card-title hight-light">參數調整</h3>
+                <p class="card-text pt-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">居住人口</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">人</span>
+                    </div>
+                  </div>
+
+                <div class="row">
+                  <p style="font-size: 1.5em;">各類用地占比</p>
+
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">住宅</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">商業</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p style="font-size: 1.5em;">各類用地建蔽率</p>
+                 
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">住宅</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">商業</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p style="font-size: 1.5em;">各類用地容積率</p>
+                  
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">住宅</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">商業</span>
+                      <input type="text" class="form-control">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>             
+              </p>            
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <a href="" id="dcr-button" class="badge rounded-pill text-bg-main mt-2 m-5 shadow">GO <i
+              class="fa-regular fa-circle-right"></i></a> </div>
+        </div>
+      </div>
+      <!-- End Item -->
+      </div>
+      </div>
+    </section>
+    <!-- /Section -->
+  </main>
+
+  <footer id="footer" class="footer position-relative text-start">
+    <div class="container">
+      <div class="text-start mb-3">
+     <span>版權聲明 | 本網站內容版權所有，未經書面許可禁止複製、散佈、修改或商業使用，引用請聯繫授權。
+     <br>免責聲明 | 本網站所提供的資訊主要基於公司自身經驗及政府公開資料進行估算，僅供參考之用。
+     </span>
+      </div>
+        <div class="copyright">
+        <span>Copyright © 中興工程顧問股份有限公司 園區及路航工程部 2024</span>
+        </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
